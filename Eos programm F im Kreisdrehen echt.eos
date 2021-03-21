@@ -1,0 +1,55 @@
+// EOS 1.5 - Programm
+r1:RECHTECK
+r2:RECHTECK
+r3:RECHTECK
+
+
+r1.verschieben(20,40)
+r1.breiteSetzen(10)
+r1.höheSetzen(50)
+r1.füllfarbeSetzen(hellblau)
+r1.randfarbeSetzen(hellblau)
+
+r2.verschieben(20,40)
+r2.breiteSetzen(40)
+r2.höheSetzen(10)
+r2.füllfarbeSetzen(hellblau)
+r2.randfarbeSetzen(hellblau)
+
+r3.breiteSetzen(30)
+r3.höheSetzen(10)
+r3.füllfarbeSetzen(hellblau)
+r3.randfarbeSetzen(hellblau)
+r3.verschieben(20,20)
+
+g1:GRUPPE
+g1.schlucke(r1)
+g1.schlucke(r2)
+g1.schlucke(r3)
+
+
+g1.verschieben(0,120)
+
+wiederhole immer
+   
+   wiederhole 175 mal
+      g1.verschieben(1,0)
+   *wiederhole
+   
+   wiederhole 290 mal
+      g1.verschieben(0,-1)
+   *wiederhole
+   
+   wiederhole 390 mal
+      g1.verschieben(-1,0)
+   *wiederhole
+   
+   wiederhole 290 mal#
+      g1.verschieben(0,1)
+   *wiederhole
+   
+   wiederhole 215 mal
+      g1.verschieben(1,0)
+   *wiederhole
+   
+*wiederhole

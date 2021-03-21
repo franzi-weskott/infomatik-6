@@ -31,16 +31,16 @@ g1.schlucke(r1)
 g1.schlucke(r2)
 g1.schlucke(r3)
 
-g1.verschieben(0,120)
-
 // =========================
 // im Viereck bewegen
 // -------------------------
 
+g1.verschieben(175-390,120)
+
 wiederhole immer
    
    // nach rechts
-   wiederhole 175 mal
+   wiederhole 390 mal
       g1.verschieben(1,0)
    *wiederhole
    
@@ -57,11 +57,6 @@ wiederhole immer
    // nach oben
    wiederhole 290 mal#
       g1.verschieben(0,1)
-   *wiederhole
-   
-   // nach rechts
-   wiederhole 215 mal
-      g1.verschieben(1,0)
    *wiederhole
    
 *wiederhole

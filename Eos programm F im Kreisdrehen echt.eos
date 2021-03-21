@@ -1,4 +1,8 @@
 // EOS 1.5 - Programm
+// =========================
+// Buchstabe F
+// -------------------------
+
 r1:RECHTECK
 r2:RECHTECK
 r3:RECHTECK
@@ -27,29 +31,38 @@ g1.schlucke(r1)
 g1.schlucke(r2)
 g1.schlucke(r3)
 
-
 g1.verschieben(0,120)
+
+// =========================
+// im Viereck bewegen
+// -------------------------
 
 wiederhole immer
    
+   // nach rechts
    wiederhole 175 mal
       g1.verschieben(1,0)
    *wiederhole
    
+   // nach unten
    wiederhole 290 mal
       g1.verschieben(0,-1)
    *wiederhole
    
+   // nach links
    wiederhole 390 mal
       g1.verschieben(-1,0)
    *wiederhole
    
+   // nach oben
    wiederhole 290 mal#
       g1.verschieben(0,1)
    *wiederhole
    
+   // nach rechts
    wiederhole 215 mal
       g1.verschieben(1,0)
    *wiederhole
    
 *wiederhole
+

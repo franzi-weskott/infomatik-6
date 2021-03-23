@@ -12,18 +12,18 @@ r1.verschieben(20,40)
 r1.breiteSetzen(10)
 r1.höheSetzen(50)
 r1.füllfarbeSetzen(hellblau)
-r1.randfarbeSetzen(hellblau)
+r1.randartSetzen(unsichtbar)
 
 r2.verschieben(20,40)
 r2.breiteSetzen(40)
 r2.höheSetzen(10)
 r2.füllfarbeSetzen(hellblau)
-r2.randfarbeSetzen(hellblau)
+r2.randartSetzen(unsichtbar)
 
 r3.breiteSetzen(30)
 r3.höheSetzen(10)
 r3.füllfarbeSetzen(hellblau)
-r3.randfarbeSetzen(hellblau)
+r3.randartSetzen(unsichtbar)
 r3.verschieben(20,20)
 
 g1:GRUPPE
@@ -35,29 +35,55 @@ g1.schlucke(r3)
 // im Viereck bewegen
 // -------------------------
 
-g1.verschieben(175-390,120)
+g1.verschiebenNach(-20,30)
 
-wiederhole immer
+schritte:Integer
+schritte := 0
+schrittanpassung:Integer
+schrittanpassung := 10
+
+
+wiederhole immer 
+   
+   wenn schritte >= 200 dann
+      schrittanpassung := -schrittanpassung
+   *wenn   
    
    // nach rechts
-   wiederhole 390 mal
+   g1.füllfarbeSetzen(grün)
+   schritte:=schritte + schrittanpassung
+   wiederhole (schritte + 1) mal
       g1.verschieben(1,0)
+      g1.drehen(-1)
    *wiederhole
    
    // nach unten
-   wiederhole 290 mal
+   g1.füllfarbeSetzen(blau)
+   schritte:=schritte + schrittanpassung
+   wiederhole (schritte + 1) mal
       g1.verschieben(0,-1)
+      g1.drehen(-1)
    *wiederhole
    
    // nach links
-   wiederhole 390 mal
+   g1.füllfarbeSetzen(rot)
+   schritte:=schritte + schrittanpassung
+   wiederhole (schritte + 1) mal
       g1.verschieben(-1,0)
+      g1.drehen(-1)
    *wiederhole
    
    // nach oben
-   wiederhole 290 mal#
+   g1.füllfarbeSetzen(gelb)
+   schritte:=schritte + schrittanpassung
+   wiederhole (schritte + 1) mal
       g1.verschieben(0,1)
+      g1.drehen(-1)
    *wiederhole
+   
+   wenn schritte <= 0 dann
+      schrittanpassung := -schrittanpassung
+   *wenn
    
 *wiederhole
 
